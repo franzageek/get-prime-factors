@@ -33,8 +33,7 @@ int main(int argc, char const *argv[])
                 break;
             if (result % primes[i] == 0)
             {
-                queue[counter] = primes[i];
-                counter++; 
+                queue[counter++] = primes[i];
                 result /= primes[i];
                 i=-1;
             }
