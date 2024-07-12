@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
     {   long long input = strtoll(argv[1],  NULL, 10);
         int* primes = (int*)init_primes();
         
-        if (is_prime(input, primes)) //Check if input is in the correct format
+        if (is_prime(input)) //Check if input is in the correct format
         {
             fprintf(stderr, "Number is prime (-1)\n");
             free(primes); 
