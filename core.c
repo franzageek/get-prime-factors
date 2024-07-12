@@ -80,14 +80,14 @@ int* init_primes(void)
     return primes;
 }
 
-bool is_prime(long long number, int* primes)
+bool is_prime(long long number)
 {
-    for (int i = 0; i<primes_size; i++)
+    for (int i = 1; i<number; i++)
     {
-        if (number == primes[i])
-            return true;
+        if (number % i == 0)
+            return false;
     }
-    return false;
+    return true;
 }
 
 int* init_queue(void)
