@@ -57,14 +57,16 @@ int main(int argc, char const *argv[])
             else
                 break;
         }
-        printf(" } = ");
+        printf(" }");
         /* > Uncomment to enable further checking
+        printf(" = ");
         acc = 1;
         for (int i = 0; i < queue_size && queue[i] != 0; i++)
             acc *= queue[i];
         
-        printf("%llu == %llu\n", acc, input, total);
+        printf("%llu == %llu", acc, input, total);
         */
+        printf("\n");
         free(queue);
         exit(0);
     }
