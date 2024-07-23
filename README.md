@@ -1,8 +1,7 @@
 # Prime Factorizer
-My very basic implementation of a prime factorization algorithm.
+A C wrapper for my [libprimes project](https://github.com/franzageek/libprimes).
 Might actually expand it and make it part of a Least Common Multiple algorithm implementation.
 
-NOTE: I've just noticed that the binaries are a bit old, forgot to recompile the thing before uploading them. Recompiling the thing is highly recommended.
-I'll recompile and reupload the binaries in a few days tho.
-
-NOTE: I might forget to merge the dev branch to master, so please use that one to make use of the latest improvements. I haven't tested it yet, but according to my sixth sense it should work without concerns. Always feel free to open an issue for every problem you might be experiencing.
+> [!NOTE] 
+> The Windows binary is a bit old. Consider recompiling the thing before using it.
+> I'll recompile and reupload it in a few days tho.
