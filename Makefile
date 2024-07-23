@@ -1,5 +1,5 @@
-primefact: *.c
-	gcc *.c -o primefact.out
+primefact: main.c
+	gcc -lprimes main.c -o primefact.out -O2
 
-debug: *.c
-	gcc -g *.c -o primefact.out
+debug: main.c
+	gcc -lprimes main.c -o primefact.out -ggdb -g -Wall -Werror -Wextra -pedantic -Os
