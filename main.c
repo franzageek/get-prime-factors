@@ -1,4 +1,5 @@
 #include <primes.h>
+#include <stdio.h>
 #include <string.h>
 #define queue_size 100
 
@@ -28,7 +29,7 @@ int main(int argc, char const *argv[])
             fprintf(stderr, "Number is prime (-4)\n"); 
             exit(-4);
         }
-        u64* queue=get_prime_fact_ull(total, queue_size);
+        u64* queue=get_prime_fact_64(total, queue_size);
         if (*queue == 0 || queue == NULL)
         {
             fprintf(stderr, "Error while parsing number (-6).\n");
@@ -40,7 +41,7 @@ int main(int argc, char const *argv[])
         {
             if (queue[i]!=0)
             {
-                if (queue[i]==queue[i-1])
+                if (i>0 && queue[i]==queue[i-1])
                     acc++;
                 else
                 {
@@ -58,17 +59,19 @@ int main(int argc, char const *argv[])
                 break;
         }
         printf(" }");
-        /* > Uncomment to enable further checking
+        // > Comment/uncomment to disable/enable further checking
+        /**/
         printf(" = ");
         acc = 1;
         for (int i = 0; i < queue_size && queue[i] != 0; i++)
             acc *= queue[i];
         
-        printf("%llu == %llu", acc, input, total);
-        */
+        printf("%llu == %llu", acc, total);
+        
         printf("\n");
         free(queue);
         exit(0);
+        /**/
     }
     else
     {
